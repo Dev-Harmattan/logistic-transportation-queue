@@ -4,6 +4,6 @@ const {get_customers, post_customer} = require('../controllers/userControlller')
 
 router.post('/customer', post_customer);
 
-router.get('/customer', get_customers);
+router.get('/customers', get_customers);
 
 module.exports = router;
