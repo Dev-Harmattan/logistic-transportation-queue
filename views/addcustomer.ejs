@@ -1,0 +1,40 @@
+<%- include('partials/header') %> 
+
+<main id="main">
+  <div class="main-container">
+    <div class="box-nav d-flex space-between">
+      <a class="border-shadow" href="/customers">
+        <span class="text-gradient"><i class="fas fa-angle-double-left"></i> Customers Table<i class="fas fa-users"></i></span>
+      </a>
+    </div>
+    <div class="table-title text-center">
+      <h2 class="text-dark">Add new Customers</h2>
+      <span class="text-light">Use the below form to add new Customer</span>
+    </div>
+    <div class="form-wrapper">
+      <form id="post_user" action="/customer" method="post">
+        <div class="new-customer">
+          <div class="form-group">
+            <label for="customer_name">Customer Name</label>
+            <input type="text" id="customer_name" name="customer_name" value="" placeholder="Customer Name">
+          </div>
+          <div class="form-group">
+            <label for="pick_up_location">Pick Up Location</label>
+            <input type="text" id="pick_up_location" name="pick_up_location" value="" placeholder="Pick Up Location">
+          </div>
+          <div class="form-group">
+            <label for="pick_off_location">Pick Off Location</label>
+            <input type="text" id="pick_off_location" name="pick_off_location" value="" placeholder="Pick Off Location">
+          </div>
+          <div class="form-group">
+            <button class="btn text-dark add" type="submit">Add Customer</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+
+
+<%- include('partials/footer') %> 
