@@ -11,8 +11,8 @@
       <h2 class="text-dark">Add new Customers</h2>
       <span class="text-light">Use the below form to add new Customer</span>
     </div>
-    <div class="form-wrapper" method="POST" action="/create/customer">
-      <form id="post_user">
+    <div class="form-wrapper">
+      <form id="post_user" method="POST" action="/create/customer" onsubmit="return validateForm(this)">
         <div class="new-customer">
           <div class="form-group">
             <label for="customer_name">Customer Name</label>
