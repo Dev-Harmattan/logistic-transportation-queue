@@ -3,7 +3,7 @@
 <main id="main">
   <div class="main-container">
     <div class="box-nav d-flex space-between">
-      <a class="border-shadow" href="/customers">
+      <a class="border-shadow" href="/">
         <span class="text-gradient"><i class="fas fa-angle-double-left"></i> Customers Table<i class="fas fa-users"></i></span>
       </a>
     </div>
@@ -11,20 +11,23 @@
       <h2 class="text-dark">Add new Customers</h2>
       <span class="text-light">Use the below form to add new Customer</span>
     </div>
-    <div class="form-wrapper">
-      <form id="post_user" action="/create/customer" method="post" onsubmit="">
+    <div class="form-wrapper" method="POST" action="/create/customer">
+      <form id="post_user">
         <div class="new-customer">
           <div class="form-group">
             <label for="customer_name">Customer Name</label>
             <input type="text" id="customer_name" name="customer_name" value="" placeholder="Customer Name">
+            <span class="name error"></span>
           </div>
           <div class="form-group">
             <label for="pick_up_location">Pick Up Location</label>
             <input type="text" id="pick_up_location" name="pick_up_location" value="" placeholder="Pick Up Location">
+            <span class="error pick-up"></span>
           </div>
           <div class="form-group">
             <label for="pick_off_location">Drop Off Location</label>
             <input type="text" id="drop_off_location" name="drop_off_location" value="" placeholder="Drop Off Location">
+            <span class="error drop-off"></span>
           </div>
           <div class="form-group">
             <button class="btn text-dark add" type="submit">Add Customer</button>

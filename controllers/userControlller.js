@@ -23,6 +23,7 @@ exports.post_customer = async (req, res) => {
     try {
       const result = await db.postData(planner.dequeue());
       if(result){
+        // res.status(201).json({result});
         res.redirect('/');
       }
     } catch (error) {
