@@ -38,7 +38,6 @@ class DbService {
       })
 
       return response;
-      // console.log(response)
     } catch (error) {
       console.log(error)
     }
@@ -47,13 +46,14 @@ class DbService {
   async postData(data) {
     try {
       const response = await new Promise((resolve, reject) => {
-        const query = 'INSERT INTO customers (customer_name, pick_up_location, drop_off_location) VALUES(?, ?, ?)';
+        const query = 'INSERT INTO customers (customer_name, pick_up_location, drop_off_location,slot, date_alocate) VALUES(?, ?, ?, ?, ?)';
         connection.query(query, [
           data.customer_name, 
           data.pick_up_location,
           data.drop_off_location,
-          data.date_alocate,
-          data.slot
+          data.slot,
+          data.date_alocate
+          
         ], (err, result) => {
           if(err){
             reject(new Error(err.message));
@@ -67,6 +67,8 @@ class DbService {
       console.log(error);
     }
   }
+
+  
 }
 
 
