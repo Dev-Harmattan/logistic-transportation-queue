@@ -1,9 +1,17 @@
 const express =  require('express');
 const router = express.Router();
-const {get_customers, post_customer, get_customer} = require('../controllers/userControlller');
+const {get_customers, post_customer, get_customer, getAllCustomers} = require('../controllers/userControlller');
 
-router.route('/customer').get(get_customer).post(post_customer);
+//page route
+router.get('/', getAllCustomers);
+router.route('/create/customer')
+.get(get_customer)
+.post(post_customer);
 
-router.get('/customers', get_customers);
+
+//api route
+router.get('/getCustomers', get_customers);
+
+
 
 module.exports = router;
